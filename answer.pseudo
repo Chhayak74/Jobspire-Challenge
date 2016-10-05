@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Name + Random number</title>
+    <script type="text/javascript" src='jquery/jquery.min.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+   
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+      <div class="well text-center">
+        <h1>Enter you name below :</h1>
+        <input type="text" id="name" placeholder="Your name here ...">
+        <input type="submit" id="submit" placeholder="Get Output" >
+        <br><br>
+        <div id="output">
+        </div>
+        
+    </div>
+    </div>
+   
+    
+
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+    <script type="text/javascript">
+      var submit = document.getElementById("submit");
+      submit.onclick = random;
+      function random(){
+        var name = document.getElementById("name").value;
+        var x = Math.floor((Math.random()*(15-6)+6));
+        document.getElementById("output").innerHTML = name+" "+x ;
+      }
+    </script>
+
+
+</body>
+
+</html>
